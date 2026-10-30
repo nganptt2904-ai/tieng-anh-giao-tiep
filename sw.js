@@ -1,5 +1,5 @@
-const CACHE='tienganh-a1932b0a7f30';
-const FILES=["icons/apple-touch-icon.png","icons/icon-192.png","icons/icon-512.png","icons/icon-maskable-512.png","index.html","luyen_noi.html","luyen_viet.html","manifest.webmanifest","meta_01_doi_song_hang_ngay.html","meta_02_cau_truc_giao_tiep.html","ngu_phap_nen.html","nguyen_am.html","phat_am_ipa.html","./"];
+const CACHE='tienganh-16dc549f92fe';
+const FILES=["icons/apple-touch-icon.png","icons/icon-192.png","icons/icon-512.png","icons/icon-maskable-512.png","index.html","luyen_noi.html","luyen_viet.html","manifest.webmanifest","meta_01_doi_song_hang_ngay.html","meta_02_cau_truc_giao_tiep.html","ngu_phap_nen.html","nguyen_am.html","phat_am_ipa.html","thuc_hanh.html","./"];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
 self.addEventListener('fetch',e=>{
